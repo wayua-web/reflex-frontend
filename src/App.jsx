@@ -1,5 +1,6 @@
 import RetailerForm from "./components/RetailerForm";
 import DispatcherBoard from "./components/DispatcherBoard";
+import RiderBoard from "./components/RiderBoard";
 import "./App.css";
 
 function App() {
@@ -13,6 +14,10 @@ function App() {
       <hr />
 
       <DispatcherBoard />
+
+      <hr />
+
+      <RiderBoard />
     </div>
   );
 }
