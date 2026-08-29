@@ -1,0 +1,148 @@
+{
+  "deliveries": [
+    {
+      "id": 4,
+      "retailer_id": 1,
+      "customer_name": "Faith Mutua (Test Recipient)",
+      "customer_phone": "+254 711 223 344",
+      "address": "Kilimani, Ring Road 5th Avenue, Nairobi",
+      "item_description": "Google Pixel 9 Pro Fold (512GB Obsidian)",
+      "status": "delivered",
+      "assigned_rider_id": 1,
+      "qr_token": "REFLEX-DEL-004-8B9T",
+      "created_at": "2026-08-29T10:17:46.433Z",
+      "pickup_time": "2026-08-29T10:17:46.604Z",
+      "delivery_time": "2026-08-29T10:17:46.661Z",
+      "status_history": [
+        {
+          "status": "assigned",
+          "timestamp": "2026-08-29T10:17:46.433Z",
+          "actor": "Dispatcher / Test Suite",
+          "note": "Created delivery #4 with QR Token REFLEX-DEL-004-8B9T"
+        },
+        {
+          "status": "picked_up",
+          "previous_status": "assigned",
+          "timestamp": "2026-08-29T10:17:46.604Z",
+          "actor": "Rider #1 (John Kamau)",
+          "note": "Scan #1 Confirmed: Item collected from retailer shop"
+        },
+        {
+          "status": "delivered",
+          "previous_status": "picked_up",
+          "timestamp": "2026-08-29T10:17:46.661Z",
+          "actor": "Rider #1 (John Kamau)",
+          "note": "Scan #2 Confirmed: Item handed to customer"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "retailer_id": 1,
+      "customer_name": "Wanjiku Mwangi",
+      "customer_phone": "+254 712 345 678",
+      "address": "Kenyatta Avenue, Suite 402, Nairobi",
+      "item_description": "Samsung Galaxy A54 5G",
+      "status": "assigned",
+      "assigned_rider_id": 1,
+      "qr_token": "REFLEX-DEL-001-XYZ",
+      "created_at": "2026-08-29T09:13:00.889Z",
+      "pickup_time": null,
+      "delivery_time": null,
+      "status_history": [
+        {
+          "status": "assigned",
+          "timestamp": "2026-08-29T09:13:00.891Z",
+          "actor": "System / Dispatcher",
+          "note": "Order placed & assigned to Rider #1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "retailer_id": 1,
+      "customer_name": "Brian Otieno",
+      "customer_phone": "+254 798 765 432",
+      "address": "Westlands Commercial Square, 3rd Floor",
+      "item_description": "Sony WH-1000XM5 Headphones",
+      "status": "picked_up",
+      "assigned_rider_id": 1,
+      "qr_token": "REFLEX-DEL-002-ABC",
+      "created_at": "2026-08-29T08:13:00.891Z",
+      "pickup_time": "2026-08-29T09:43:00.891Z",
+      "delivery_time": null,
+      "status_history": [
+        {
+          "status": "assigned",
+          "timestamp": "2026-08-29T08:13:00.891Z",
+          "actor": "System / Dispatcher",
+          "note": "Order assigned to Rider #1"
+        },
+        {
+          "status": "picked_up",
+          "timestamp": "2026-08-29T09:43:00.891Z",
+          "actor": "Rider #1 (John Kamau)",
+          "note": "Scan #1 confirmed at shop pickup"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "retailer_id": 1,
+      "customer_name": "Amina Hassan",
+      "customer_phone": "+254 722 113 344",
+      "address": "Moi Avenue, Digital Plaza Shop 12",
+      "item_description": "MacBook Air Charger & Cable",
+      "status": "delivered",
+      "assigned_rider_id": 1,
+      "qr_token": "REFLEX-DEL-003-DEF",
+      "created_at": "2026-08-29T06:13:00.891Z",
+      "pickup_time": "2026-08-29T07:13:00.892Z",
+      "delivery_time": "2026-08-29T09:13:00.892Z",
+      "status_history": [
+        {
+          "status": "assigned",
+          "timestamp": "2026-08-29T06:13:00.892Z",
+          "actor": "System / Dispatcher",
+          "note": "Order assigned to Rider #1"
+        },
+        {
+          "status": "picked_up",
+          "timestamp": "2026-08-29T07:13:00.892Z",
+          "actor": "Rider #1 (John Kamau)",
+          "note": "Scan #1 confirmed at shop pickup"
+        },
+        {
+          "status": "delivered",
+          "timestamp": "2026-08-29T09:13:00.892Z",
+          "actor": "Rider #1 (John Kamau)",
+          "note": "Scan #2 confirmed at customer handover"
+        }
+      ]
+    }
+  ],
+  "audit_logs": [
+    {
+      "action": "CREATE_DELIVERY",
+      "delivery_id": 4,
+      "timestamp": "2026-08-29T10:17:46.433Z",
+      "details": "Created new test delivery for Faith Mutua (Test Recipient)"
+    },
+    {
+      "action": "STATUS_UPDATE",
+      "delivery_id": 4,
+      "from_status": "assigned",
+      "to_status": "picked_up",
+      "timestamp": "2026-08-29T10:17:46.604Z",
+      "actor_id": 1
+    },
+    {
+      "action": "STATUS_UPDATE",
+      "delivery_id": 4,
+      "from_status": "picked_up",
+      "to_status": "delivered",
+      "timestamp": "2026-08-29T10:17:46.661Z",
+      "actor_id": 1
+    }
+  ]
+}
