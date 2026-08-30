@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Html5QrcodeScanner } from 'html5-qrcode';
 import QRCode from 'qrcode';
+import { io } from 'socket.io-client';
 
 const CURRENT_RIDER_ID = 1; // John Kamau (Test Rider)
 
@@ -132,6 +133,17 @@ export default function RiderView() {
   useEffect(() => {
     fetchDeliveries();
   }, [apiBaseUrl]);
+  useEffect(() => {
+  const socket = io(apiBaseUrl);
+
+  socket.on('statusUpdated', () => {
+    fetchDeliveries();
+  });
+
+  return () => {
+    socket.disconnect();
+  };
+}, [apiBaseUrl]);
 
   // Generate QR Code for Phone Wi-Fi Connect
   useEffect(() => {
