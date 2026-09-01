@@ -7,10 +7,7 @@ const CURRENT_RIDER_ID = 1; // John Kamau (Test Rider)
 
 // Automatically detect host (localhost or local network IP like 192.168.0.103)
 const getApiBaseUrl = () => {
-  if (typeof window !== 'undefined' && window.location.hostname) {
-    return `http://${window.location.hostname}:5000`;
-  }
-  return 'http://localhost:5000';
+  return 'https://reflex-backend-ot79.onrender.com';
 };
 
 // Preset templates for fast 1-click test delivery creation
